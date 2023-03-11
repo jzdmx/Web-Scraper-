@@ -1,5 +1,5 @@
-# Web-Scraper-
-A web scraper for data extraction and analysis 
+# Web scraping for data extraction and analysis 
+
 To crawl all the links in the target website, first define "getHtmlText" as the function to get the links to the home page, this function is responsible for all the webpage requests in the subsequent steps. Set the website (https://community.dur.ac.uk/hubert.shum/comp42315/) as the starting URL and use the 'getHtmlText' get the page and parse it. Then get the link to the publication page by finding the tag 'navigator' and again use 'getHtmlText' to request and parse the page content.
 From the publication page, extract the P with the keyword = 'TextOption' to get all the text of the topic. Of all the strings obtained for the topics, the HTML structure of the first topic 'character animation' is found to be different from the others and needs to be munged by removing '\xa0'. For each topic page, extract the DIV with keyword class='w3-cell-middle', within the extracted block find all SPAN with keyword class='TextSmallDefault' to get the author and affiliate web links. 
-All the results are stored in a list.
+All the results are stored in a csv file.
